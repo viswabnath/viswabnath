@@ -1,8 +1,15 @@
 # Ignore everything in this directory and subdirectories
 *
 
-# Un-ignore the README.md file
+# Un-ignore the profile card sources and outputs
 !README.md
-
-# (Recommended) Un-ignore the .gitignore file itself so your rules are saved in the repo
 !.gitignore
+!dark_mode.svg
+!light_mode.svg
+!scripts/
+!scripts/build.py
+!cache/
+!cache/stats.json
+!.github/
+!.github/workflows/
+!.github/workflows/build.yml

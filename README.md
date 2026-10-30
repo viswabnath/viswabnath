@@ -1,21 +1,18 @@
-<div align="center">
+<a href="https://viswabnath.vercel.app">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./dark_mode.svg">
+    <img src="./light_mode.svg" width="100%" alt="viswa@github:~$ neofetch. Viswanath Bodasakurthi, Senior Software Engineer at Channelsoft and Co-Founder of Onemark Digital. AI-native developer: Angular, React, Next.js, Three.js, Claude Agent SDK, Node.js, Swift." />
+  </picture>
+</a>
 
-  <h1>Viswanath Bodasakurthi</h1>
+<p align="center">
+  <a href="https://viswabnath.vercel.app"><img src="https://img.shields.io/badge/viswabnath.vercel.app-161b22?style=for-the-badge&logo=vercel&logoColor=58a6ff" alt="Portfolio" /></a>
+  <a href="https://linkedin.com/in/viswabnath"><img src="https://img.shields.io/badge/linkedin-161b22?style=for-the-badge&logo=linkedin&logoColor=58a6ff" alt="LinkedIn" /></a>
+  <a href="https://onemark.co.in"><img src="https://img.shields.io/badge/onemark_digital-161b22?style=for-the-badge&logoColor=c9a96e" alt="Onemark Digital" /></a>
+  <img src="https://komarev.com/ghpvc/?username=viswabnath&style=for-the-badge&color=161b22&label=profile+views" alt="Profile views" />
+</p>
 
-  **Senior Software Engineer · Co-Founder · AI-Native Developer**
-
-  *8+ years shipping production systems across clinical, blockchain, finance, and creative tech*
-
-  [![Portfolio](https://img.shields.io/badge/Portfolio-viswabnath.vercel.app-000?style=flat-square&logo=vercel&logoColor=white)](https://viswabnath.vercel.app)
-  [![LinkedIn](https://img.shields.io/badge/LinkedIn-viswabnath-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://linkedin.com/in/viswabnath)
-  [![Onemark](https://img.shields.io/badge/Agency-Onemark%20Digital-c9a96e?style=flat-square)](https://onemark.co.in)
-  ![Profile Views](https://komarev.com/ghpvc/?username=viswabnath&style=flat-square&color=c9a96e)
-
-</div>
-
----
-
-### whoami
+### `$ whoami`
 
 Senior Software Engineer at **Channelsoft**, building clinical platforms for ThermoFisher (formerly Clario), used across 50+ countries.
 Co-Founder of **[Onemark Digital](https://onemark.co.in)** — a creative-tech agency shipping bespoke digital experiences.
@@ -24,13 +21,9 @@ I work AI-native. Claude Code is my primary engineering environment — I've use
 zero prior 3D experience, build a macOS disk cleaner with zero prior Swift experience, and run multi-agent pipelines in
 production. The stack changes; the philosophy doesn't: **ship things that cannot fail.**
 
-Currently building: AI-native tooling and creative-tech products at Onemark Digital
+<sub>open to: consulting, collaborations, and interesting problems</sub>
 
-Open to: consulting, collaborations, and interesting problems
-
----
-
-### What I Build With
+### `$ cat ~/stack.md`
 
 | Area | Stack |
 |---|---|
@@ -41,9 +34,7 @@ Open to: consulting, collaborations, and interesting problems
 | **Native** | Swift, SwiftUI, AppKit (macOS) |
 | **Codebase Intel** | code-review-graph MCP — semantic search, impact radius, PR context |
 
----
-
-### Client & Product Work (via Onemark Digital)
+### `$ ls ~/onemark/clients`
 
 | Project | What it is |
 |---|---|
@@ -54,7 +45,7 @@ Open to: consulting, collaborations, and interesting problems
 | [**OneMark Stories**](https://stories.onemark.co.in) | Agency platform for bespoke digital event experiences — 200+ shipped |
 | [**FamilyWall**](https://familywall.in) | Multi-tenant family tree SaaS — subdomain isolation, Claude Haiku NL queries, WhatsApp OTP |
 
-### Personal Projects & Experiments
+### `$ ls ~/experiments`
 
 | Project | What it is |
 |---|---|
@@ -65,26 +56,10 @@ Open to: consulting, collaborations, and interesting problems
 | [**GhostGrab**](https://github.com/viswabnath/GhostGrab) | Video scraper that strips all EXIF/tracking metadata via FFmpeg before download |
 | [**Manvi OS**](https://manvi.onrender.com) | Event-driven WhatsApp AI assistant — cron scheduling, atomic dispatch guards, live dashboard |
 
----
+<br>
 
-### GitHub Activity
-
-<div align="center">
-
-![GitHub Stats](https://github-readme-stats-eight-theta.vercel.app/api?username=viswabnath&show_icons=true&theme=radical&show=reviews,prs_merged,prs_merged_percentage&include_all_commits=true&count_private=true)
-
-![Streak](https://github-readme-streak-stats.herokuapp.com/?user=viswabnath&theme=radical)
-
-![Top Langs](https://github-readme-stats-eight-theta.vercel.app/api/top-langs/?username=viswabnath&layout=compact&theme=radical&hide=css)
-
-</div>
-
----
-
----
-
-<div align="center">
-
-*Clinical · Blockchain · AI-native · Creative — 8 years, 4 industries, 50+ projects shipped live.*
-
-</div>
+<p align="center">
+  <code>$ echo "Clinical · Blockchain · AI-native · Creative — 8 years, 4 industries, 50+ projects shipped live."</code>
+  <br>
+  <sub>terminal card regenerated daily by <a href="./scripts/build.py">scripts/build.py</a></sub>
+</p>
