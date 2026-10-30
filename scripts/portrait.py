@@ -18,7 +18,7 @@ ROOT = Path(__file__).resolve().parent.parent
 
 COLS, ROWS = 72, 45
 CELL_ASPECT = 5.4 / 10          # ART_CW / ART_LH in build.py
-CROP_TOP, CROP_HEIGHT = 0.02, 0.40   # fraction of image height
+CROP_TOP, CROP_HEIGHT = 0.02, 0.80   # fraction of image height
 RAMP = " .,:;-~=+*xoO#%@"      # strictly increasing visual weight
 
 
