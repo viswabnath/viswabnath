@@ -26,29 +26,28 @@ PROMPT_USER = "viswa"
 HANDLE = "viswanath@onemark"
 
 INFO = [
-    ("OS", "Web, macOS, anything with a browser"),
+    ("OS", "Senior Software Engineer @ Channelsoft"),
+    ("Host", "Co-Founder @ Onemark Digital"),
     ("Uptime", "{uptime}"),
-    ("Host", "OneMark"),
-    ("Kernel", "Creative Frontend Developer"),
+    ("IDE", "Claude Code (AI-native)"),
     None,
-    ("Languages.Core", "JavaScript, HTML, CSS"),
-    ("Frameworks", "React, Vite"),
-    ("Graphics", "Three.js, GSAP"),
-    ("Backend", "Firebase, Git"),
-    None,
-    ("Focus", "Interactive 3D web, UI animation"),
+    ("Stack.Frontend", "Angular, React, Next.js, TypeScript"),
+    ("Stack.AI", "Claude Agent SDK, MCP, CrewAI"),
+    ("Stack.3D", "Three.js, WebGL, Blender, GSAP"),
+    ("Stack.Backend", "Node.js, FastAPI, Supabase"),
+    ("Stack.Native", "Swift, SwiftUI, AppKit"),
 ]
 
 CONTACT = [
-    ("Portfolio", "viswabnath.github.io/portfolio"),
+    ("Portfolio", "viswabnath.vercel.app"),
+    ("Agency", "onemark.co.in"),
     ("LinkedIn", "in/viswabnath"),
-    ("GitHub", "@viswabnath"),
 ]
 
 PLAN = [
-    ("x", "build immersive, interactive 3D web experiences"),
-    ("x", "craft refined UI animations"),
-    ("~", "push web performance & modern rendering further"),
+    ("x", "8+ years across clinical, blockchain, finance & creative tech"),
+    ("x", "200+ bespoke digital experiences shipped"),
+    ("~", "building AI-native tooling at Onemark Digital"),
 ]
 
 THEMES = {
@@ -390,8 +389,9 @@ def render(theme, stats):
     scan = (f'<rect y="{BAR}" width="{W}" height="{h - BAR}" fill="url(#scan)"/>'
             if t["scan"] else "")
     title = f"{PROMPT_USER}@github: ~ — zsh"
-    summary = (f"{HANDLE}: Creative Frontend Developer building interactive 3D web "
-               f"experiences with React, Three.js and GSAP under the OneMark brand.")
+    summary = (f"{HANDLE}: Senior Software Engineer at Channelsoft and Co-Founder of "
+               f"Onemark Digital. AI-native developer working across Angular, React, "
+               f"Three.js, Claude Agent SDK, Node.js and Swift.")
 
     return f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {h}" width="{W}" height="{h}" role="img" aria-labelledby="title">
 <title id="title">{escape(summary)}</title>
