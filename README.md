@@ -50,6 +50,7 @@ production. The stack changes; the philosophy doesn't: **ship things that cannot
 | Project | What it is |
 |---|---|
 | [**Pettlu Residence**](https://pettlu-house-render.vercel.app) | Full 3D architectural walkthrough — built with Blender MCP + Claude Code, zero prior 3D experience |
+| [**Vunguturi Residence**](https://vunguturi-residence.vercel.app) | 3D architectural presentation for a three-floor home — compare stair layouts, walk the build through 11 construction-stage models, plus plans and area statements |
 | **Remotion × Claude** | AI-directed programmatic video — Claude writes the composition, Remotion renders to MP4 |
 | [**CompresoClean**](https://github.com/viswabnath/CompresoClean) | macOS native disk cleaner — Swift/AppKit, built with Claude Code, zero prior Swift experience |
 | [**Compreso**](https://compreso.vercel.app) | Privacy-first browser image compression — binary search quality targeting, ZIP batch export |
