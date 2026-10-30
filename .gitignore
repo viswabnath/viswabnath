@@ -1,0 +1,15 @@
+# Ignore everything in this directory and subdirectories
+*
+
+# Un-ignore the profile card sources and outputs
+!README.md
+!.gitignore
+!dark_mode.svg
+!light_mode.svg
+!scripts/
+!scripts/build.py
+!cache/
+!cache/stats.json
+!.github/
+!.github/workflows/
+!.github/workflows/build.yml
