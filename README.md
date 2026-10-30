@@ -39,7 +39,7 @@ production. The stack changes; the philosophy doesn't: **ship things that cannot
 | Project | What it is |
 |---|---|
 | [**Lekka**](https://lekka-sass.vercel.app) | Business management SaaS — payroll, invoices, timesheets, clients — one ledger for the whole business |
-| [**Accretion Labs**](https://accretionlabs.net) | AI-powered materials science startup — generative discovery, property prediction, 3D crystal-lattice hero scene |
+| [**FinDB**](https://findb-app.vercel.app) | Free personal finance app for Indian families — accounts, cards, loans, gold & savings in one net-worth picture, plus EMI, FD, RD, SIP and chit fund calculators |
 | **OneMark Internal** | Internal ops portal for Onemark — employee management, payslips & invoicing, quotations, finance tracking, audit logging |
 | [**YOYU**](https://yoyu.vercel.app) | Consumer mobile app + marketing site — React Native/Android, MapLibre integration, security hardening |
 | [**OneMark Stories**](https://stories.onemark.co.in) | Agency platform for bespoke digital event experiences — 200+ shipped |
