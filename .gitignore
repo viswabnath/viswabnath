@@ -8,6 +8,10 @@
 !light_mode.svg
 !scripts/
 !scripts/build.py
+!scripts/portrait.py
+!scripts/segment.swift
+!assets/
+!assets/portrait.txt
 !cache/
 !cache/stats.json
 !.github/
