@@ -16,10 +16,10 @@ from PIL import Image, ImageFilter, ImageOps
 
 ROOT = Path(__file__).resolve().parent.parent
 
-COLS, ROWS = 46, 26
-CELL_ASPECT = 8.4 / 18          # glyph width / portrait line height in build.py
-CROP_TOP, CROP_HEIGHT = 0.0, 0.54   # fraction of image height
-RAMP = " .,:;i1tfLCG08@"
+COLS, ROWS = 72, 45
+CELL_ASPECT = 5.4 / 10          # ART_CW / ART_LH in build.py
+CROP_TOP, CROP_HEIGHT = 0.02, 0.40   # fraction of image height
+RAMP = " .,:;-~=+*xoO#%@"      # strictly increasing visual weight
 
 
 def silhouette(mask):
@@ -47,19 +47,23 @@ def portrait(photo, mask):
 
     crop_h = int(h * CROP_HEIGHT)
     crop_w = int(crop_h * CELL_ASPECT * COLS / ROWS)
-    # Centre the crop on the person's mass within the cropped band.
-    band = m.crop((0, 0, w, crop_h)).point(lambda v: 255 if v > 128 else 0)
-    xs = [x for x in range(w) for y in range(0, crop_h, 4) if band.getpixel((x, y))]
-    cx = sum(xs) // len(xs) if xs else w // 2
+    # Centre the crop on the head: the main silhouette's cells in the top third.
+    grid = 100
+    body = silhouette(m.resize((grid, grid), Image.LANCZOS))
+    xs = [x for x, y in body if y < grid // 3]
+    cx = sum(xs) * w // (len(xs) * grid) if xs else w // 2
     left = max(0, min(w - crop_w, cx - crop_w // 2))
     top = int(h * CROP_TOP)
     box = (left, top, left + crop_w, top + crop_h)
 
     img = img.crop(box)
     m = m.crop(box).filter(ImageFilter.GaussianBlur(1))
-    # Local contrast so the face reads, then sharpen edges a little.
-    img = ImageOps.autocontrast(img, cutoff=1, mask=m.point(lambda v: 255 if v > 128 else 0))
-    img = img.filter(ImageFilter.UnsharpMask(radius=3, percent=120, threshold=3))
+    # Stretch contrast using only the person's pixels, lift mid-tones so skin
+    # stays light and features (eyes, brows, beard, hair) stay dense.
+    person = m.point(lambda v: 255 if v > 128 else 0)
+    img = ImageOps.equalize(img, mask=person)
+    img = img.point(lambda v: int(255 * (v / 255) ** 0.8))
+    img = img.filter(ImageFilter.UnsharpMask(radius=2, percent=180, threshold=1))
 
     small = img.resize((COLS, ROWS), Image.LANCZOS)
     small_m = m.resize((COLS, ROWS), Image.LANCZOS)

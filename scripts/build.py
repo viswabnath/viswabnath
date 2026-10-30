@@ -77,7 +77,8 @@ THEMES = {
 W = 980
 CW = 8.4          # monospace glyph advance at 14px
 LH = 20           # line height
-ART_LH = 18       # portrait line height (scripts/portrait.py assumes this)
+ART_CW = 5.4      # portrait glyph advance at 9px
+ART_LH = 10       # portrait line height (scripts/portrait.py assumes ART_CW / ART_LH)
 PAD = 24
 BAR = 34
 INFO_X = 432      # left edge of the neofetch text column
@@ -120,7 +121,7 @@ def fetch_stats(token):
         page = gql(token, """
           query($login: String!, $cursor: String) {
             user(login: $login) {
-              repositories(first: 100, after: $cursor, ownerAffiliations: OWNER, privacy: PUBLIC) {
+              repositories(first: 100, after: $cursor, ownerAffiliations: OWNER) {
                 totalCount
                 pageInfo { hasNextPage endCursor }
                 nodes { stargazerCount }
@@ -296,7 +297,7 @@ def render(theme, stats):
     g0, g1 = t["grad"]
     c.defs.append(
         f'<linearGradient id="grad" gradientUnits="userSpaceOnUse" x1="{art_x}" y1="{art_y}" '
-        f'x2="{art_x + CW * 46}" y2="{art_y + ART_LH * len(art)}"><stop offset="0" stop-color="{g0}"/>'
+        f'x2="{art_x + ART_CW * max(map(len, art))}" y2="{art_y + ART_LH * len(art)}"><stop offset="0" stop-color="{g0}"/>'
         f'<stop offset="1" stop-color="{g1}"/></linearGradient>')
     rows = []
     for r, row in enumerate(art):
@@ -305,10 +306,10 @@ def render(theme, stats):
         # Position by indent: some renderers drop leading whitespace.
         indent = len(row) - len(row.lstrip())
         rows.append(
-            f'<text x="{art_x + indent * CW:.1f}" y="{art_y + r * ART_LH}" visibility="hidden">'
+            f'<text class="art" x="{art_x + indent * ART_CW:.1f}" y="{art_y + r * ART_LH}" visibility="hidden">'
             f'{escape(row.strip())}<set attributeName="visibility" to="visible" '
-            f'begin="{at + r * 0.035:.3f}s" fill="freeze"/></text>')
-    c.out.append(f'<g class="pulse" fill="url(#grad)" filter="url(#glow)">{"".join(rows)}</g>')
+            f'begin="{at + r * 0.02:.3f}s" fill="freeze"/></text>')
+    c.out.append(f'<g fill="url(#grad)">{"".join(rows)}</g>')
 
     # Right column: neofetch info
     step = 0.04
@@ -377,6 +378,7 @@ def render(theme, stats):
 <style>
 text {{ font: 14px ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace; white-space: pre; }}
 .title {{ font-size: 12px; fill: {t["dim"]}; }}
+.art {{ font-size: 9px; font-weight: 700; }}
 .pulse {{ animation: pulse 3.2s ease-in-out infinite; }}
 @keyframes pulse {{ 0%, 100% {{ opacity: 1; }} 50% {{ opacity: 0.72; }} }}
 @media (prefers-reduced-motion: reduce) {{ .pulse {{ animation: none; }} }}
