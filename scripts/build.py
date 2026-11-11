@@ -26,10 +26,10 @@ PROMPT_USER = "viswa"
 HANDLE = "viswanath@onemark"
 
 INFO = [
-    ("OS", "Senior Software Engineer @ Channelsoft"),
-    ("Host", "Co-Founder @ Onemark Digital"),
+    ("Role", "Senior Software Engineer @ Channelsoft"),
+    ("Company", "Co-Founder @ Onemark Digital"),
     ("Uptime", "{uptime}"),
-    ("IDE", "Claude Code (AI-native)"),
+    ("IDE", "VS Code, Claude Code, Antigravity, Codex"),
     None,
     ("Stack.Frontend", "Angular, React, Next.js, TypeScript"),
     ("Stack.AI", "Claude Agent SDK, MCP, CrewAI"),

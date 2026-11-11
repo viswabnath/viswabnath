@@ -14,7 +14,7 @@
 
 ### `$ whoami`
 
-Senior Software Engineer at **Channelsoft**, building clinical platforms for ThermoFisher (formerly Clario), used across 50+ countries.
+Senior Software Engineer at **Channelsoft**, building clinical platforms for ThermoFisher (which acquired Clario), used across 50+ countries.
 Co-Founder of **[Onemark Digital](https://onemark.co.in)** — a creative-tech agency shipping bespoke digital experiences.
 
 I work AI-native. Claude Code is my primary engineering environment — I've used it to ship a full 3D architectural walkthrough with
