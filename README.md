@@ -43,7 +43,7 @@ production. The stack changes; the philosophy doesn't: **ship things that cannot
 | **OneMark Internal** | Internal ops portal for Onemark — employee management, payslips & invoicing, quotations, finance tracking, audit logging |
 | [**YOYU**](https://www.yoyu.in) | Consumer mobile app + marketing site — React Native/Android, MapLibre integration, security hardening |
 | [**OneMark Stories**](https://stories.onemark.co.in) | Agency platform for bespoke digital event experiences — 200+ shipped |
-| [**FamilyWall**](https://familywall.in) | Multi-tenant family tree SaaS — subdomain isolation, Claude Haiku NL queries, WhatsApp OTP |
+| **FamilyWall** | Multi-tenant family tree SaaS — subdomain isolation, Claude Haiku NL queries, WhatsApp OTP |
 | [**ACBPL**](https://acbpl.vercel.app) | Corporate site for Aduru Constructions & Builders, Hyderabad — Next.js 16, GSAP, Tailwind CSS |
 | [**Kidney & Andro Care**](https://kidneyandandrocare.com) | Hospital website for a urology & andrology unit of Kusuma Hospitals, Kakinada |
 | [**Powertech Automations**](https://www.powertechautomations.com) | Industrial automation company site, Hyderabad — control panels, PLC/VFD services; Next.js with in-browser PDF generation |
