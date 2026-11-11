@@ -45,7 +45,8 @@ CONTACT = [
 ]
 
 PLAN = [
-    ("x", "8+ years across clinical, blockchain, finance & creative tech"),
+    # {years} is the whole-year part of Uptime (same source), so the two can never disagree.
+    ("x", "{years}+ years across clinical, blockchain, finance & creative tech"),
     ("x", "200+ bespoke digital experiences shipped"),
     ("~", "building AI-native tooling at Onemark Digital"),
 ]
@@ -170,6 +171,15 @@ def load_stats():
         return json.loads(CACHE.read_text())
     return {"created_at": None, "repos": 0, "stars": 0, "commits": 0,
             "followers": 0, "contributed": 0, "prs": 0}
+
+
+def whole_years(created_at):
+    """Whole years since the account was created; the same value Uptime shows."""
+    if not created_at:
+        return 0
+    start = dt.date.fromisoformat(created_at[:10])
+    today = dt.date.today()
+    return today.year - start.year - ((today.month, today.day) < (start.month, start.day))
 
 
 def uptime(created_at):
@@ -359,6 +369,7 @@ def render(theme, stats):
         y += LH
         at += 0.12
         color = t["user"] if mark == "x" else t["warn"]
+        task = task.format(years=whole_years(stats["created_at"]))
         c.line(PAD, y, [c.span("[", t["dim"]), c.span(mark, color, True),
                         c.span("] ", t["dim"]), c.span(task, t["text"])], at)
 

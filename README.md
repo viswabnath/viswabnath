@@ -66,7 +66,7 @@ production. The stack changes; the philosophy doesn't: **ship things that cannot
 <br>
 
 <p align="center">
-  <code>$ echo "Clinical · Blockchain · AI-native · Creative — 8 years, 4 industries, 50+ projects shipped live."</code>
+  <code>$ echo "Clinical · Blockchain · AI-native · Creative — 9+ years, 4 industries, 50+ projects shipped live."</code>
   <br>
   <sub>terminal card regenerated daily by <a href="./scripts/build.py">scripts/build.py</a></sub>
 </p>
